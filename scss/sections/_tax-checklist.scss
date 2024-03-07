@@ -1,0 +1,15 @@
+@use'../custom' as *;
+@use '../components/mixins' as *;
+
+.blue-line{
+    background: $secondary;
+}
+.red-outlined-box {
+    border: 2px solid $primary; /* Blue border color */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    color: black; /* Optional: Set text color to blue */
+    h4{
+        color: $secondary;
+    }
+}

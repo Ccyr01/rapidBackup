@@ -1,0 +1,35 @@
+@use'../custom' as *;
+@use '../components/mixins' as *;
+.bookkeeping-page{
+    .footer-sm{
+        font-size: 24px;
+        
+        a{
+            color:$white;
+            i{
+                font-size: 1rem;
+                margin-left: 1rem;
+
+                @include media-breakpoint-up(sm){
+                    font-size: 1.6rem;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .business-shake{
+        max-width: 400px;
+        @include media-breakpoint-down(sm){
+            max-width: 380px;
+        }
+    }
+    .call-us{
+        padding-bottom: 4rem;
+    }
+    .rapidAloansLogo{
+        @include media-breakpoint-down(sm){
+            text-align: center !important;
+        }
+    }
+}

@@ -1,0 +1,406 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.intro-section {
+    @include solidBlue;
+    position: relative;
+    overflow: hidden;
+    //background-image: url('../../images/FrontPageWhole2.jpg'); /* Replace with your image path */
+    background-size: 100% 550px; /* Adjust to 'cover', 'contain', or a specific size */
+    background-position: center; /* Adjust as needed */
+    background-repeat: no-repeat;
+    opacity: .9;
+    padding: 103px 0 0 0;
+    width: 100%;
+
+    .img-fluid {
+        height: 90px;
+        transition: transform 0.3s ease;
+        @include media-breakpoint-down(sm) {
+            height: auto;
+        }
+    }
+
+    &:hover .img-fluid {
+        transform: scale(1.2);
+    }
+
+    a {
+        .promo-box {
+            position: relative;
+        }
+    }
+    // .new-tax-season-hours{
+    //     position: fixed;
+    //     height: auto;
+    //     width: 300px;
+    //     background-color: $secondary;
+    // }
+    .new-tax-season-hours {
+        // position: absolute;
+        //top: 15rem;
+        //left: 20px;
+        //width: 30%; /* Adjust the width as needed */
+        padding: .2rem; /* Add padding to the box */
+        background-color: $secondary; /* Add a semi-transparent background */
+        //opacity: .85;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .container{
+        padding: 0px;
+        margin:0px;
+        width: 100%;
+        max-width: none;
+      }
+}
+
+.text-link{
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    &:hover{
+        color: $primary;
+    }
+}
+.rapidAloansLogo{
+    @include media-breakpoint-down(sm){
+        text-align: center !important;
+    }
+}
+.bg1, .bg2{
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 520px;
+    @include media-breakpoint-down(md){
+        height: 400px;
+    }
+    
+}
+.bg1{
+    background-image: url('../../images/WhatsApp_BACKGROUND.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg2{
+     background-image: url('../../images/disneyBackground.png');    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    @include media-breakpoint-down(md){
+        gap:0px;
+    }
+    .clickable.text-right {
+        text-align: right;
+        margin-bottom: 0px;
+        a{
+            cursor:pointer;
+            z-index: 99;
+            font-size: 22px;
+            text-decoration: none;
+            text-shadow: 2px 2px $purple;
+        }
+    }
+}
+#parentMoney {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap;
+  }
+  
+  .img-center {
+    position: relative;
+  }
+  
+  .bg3, .bg4{
+    width: 100%; 
+    max-width: 1000px;
+    margin: 10px; 
+    @include media-breakpoint-down(md){
+        margin-bottom: -20px;
+    }
+    
+  }
+  
+  
+  #promo1500 {
+    position: absolute;
+    top: 30%; /* Center vertically */
+    transform: translate(10%, -20%); 
+    display: none; 
+    @include media-breakpoint-down(md){
+        transform: translate(20%, -70%);
+    }
+
+  }
+  .bg4{
+    margin-top:-40px;
+    
+  }
+  .bg5{
+    height:auto;
+    width:100%;
+    @include media-breakpoint-up(lg){
+        margin-top: 15px;
+    }
+    
+  }
+  @media (max-width: 768px) {
+    #parentMoney {
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center;
+    }
+  
+    .img-center {
+      width: 100%; /* Make each image take full width on smaller screens */
+    }
+  
+    .bg3, .bg4, .bg5 {
+      order: 1; /* Change the order to overlap items */
+    //   margin-top: -50px; /* Adjust the negative margin to overlap */
+    }
+  
+    
+  }
+
+.waltograph-line {
+    margin-top: 20px;
+    line-height: 1;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Waltograph', sans-serif;
+    margin-bottom: 20px;
+
+}
+
+
+.screen{
+    width: 100%;
+    margin-top: 20px;
+
+    max-width: 450px;
+}
+#parentMoney{
+
+  
+    height:  520px;
+    position: relative; //normal stack
+    .layer1, .layer2,.layer3{
+        position: absolute; //selfish
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .layer1{
+        z-index: 0;
+        background-image: url('../../images/$1500Background.jpg');
+    }
+    .layer2{
+        z-index: 10;
+        background-image: url('../../images/Rain.gif');
+        background-size: cover;
+    }
+    .layer3{
+        z-index: 20;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center ;
+        margin-top: -20px;
+        @include media-breakpoint-down(sm){
+            margin-top: -30px;
+        }
+        #top{
+            > img{
+                max-width: 500px;
+                @include media-breakpoint-up(lg){
+                    max-width: 670px;
+                }
+                @include media-breakpoint-up(xl){
+                    max-width: 750px;
+                }
+                @include media-breakpoint-down(sm){
+                    max-width: 360px;
+                }
+            }
+            
+        }
+        #mid{
+            > img{
+                margin-top: -40px; 
+                max-width: 450px;
+                @include media-breakpoint-down(sm){
+                    max-width: 360px;
+                    margin-top:1px;
+                }
+             }
+            }
+        #bottom{
+            > img{
+                max-width: 500px;
+                @include media-breakpoint-up(lg){
+                    margin-top:-30px;
+                    max-width: 670px;
+                }
+                @include media-breakpoint-up(xl){
+                    max-width: 750px;
+                }
+                @include media-breakpoint-down(sm){
+                    max-width: 360px;
+                    margin-top:-40px;
+
+                }
+            }
+            
+        }
+           
+
+    }
+}
+#promoscreen{
+    z-index: 20;
+    @include media-breakpoint-down(md){
+        position:relative !important;
+        top:450px !important;
+        height: 310px !important;
+    }
+    
+}
+#rainBackground{
+    z-index: 10;
+    @include media-breakpoint-down(md){
+        background-image: url('../../images/Rain.gif');
+        background-color: black;
+        margin-top: 40px;
+    }
+}
+#a1500Background {
+    z-index: 0;
+}
+
+.text-right{
+    text-align: right;
+    @include media-breakpoint-up(sm){
+        margin-bottom: 10px;
+    }
+}
+
+.rapidCashDisney {
+    margin-top: 120px; 
+    @include media-breakpoint-up(sm){
+        margin-top: 80px; 
+    }
+}
+.img-center{
+
+    text-align: center;
+    img{
+        filter: drop-shadow(4px 4px 4px #000000);
+    }
+}
+.box-for-intro{
+
+ 
+    max-width: 340px;
+    @include media-breakpoint-up(md){
+        width: 400px;
+        margin-top: -80px;
+        @media (min-width: 990px) and (max-width: 1410px) {
+            margin-top: -120px;    
+        }
+
+    }
+}
+.inner-left{
+    /* Style the clickable anchor */
+.clickable-image {
+    display: block;
+    background-size: cover; 
+    background-position: center; 
+    padding: 15px;
+    height: 180px;
+    text-decoration: none; 
+}
+
+/* Style the image within the clickable anchor */
+.clickable-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+}
+// .important-banner{
+//     background-image: url('../../images/WhatsApp_RAPID-PHONE.png');
+//     background-size: cover;
+//     background-position: center; 
+//     height: 80px;
+//     @include media-breakpoint-down(sm){
+//         height:60px;
+//     }
+// }
+.rapid-lockup-container{
+    display: flex;
+    justify-content: flex-end;
+}
+.rapid-lockup{
+   
+    max-width: 400px;
+    padding: 15px;
+}
+.svgWave{
+    margin-top: -130px;
+    z-index: 50;
+    position: relative;
+    @include media-breakpoint-down(sm){
+        margin-top: -50px;
+    }
+    @include media-breakpoint-down(md){
+        margin-top: -80px;
+    }
+    @include media-breakpoint-up(lg){
+        margin-top: -200px;
+    }
+    
+}
+.rapidDisney{
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 310px;
+    @include media-breakpoint-up(md) {
+        margin-bottom: 20px;
+        padding-bottom: 1rem;
+        @media (min-width: 990px) and (max-width: 1250px) {
+          padding-bottom: 40px;
+        }
+      }
+}
+
+    .clickable{
+        a{
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            text-shadow: 2px 2px purple;
+            font-weight: 300;
+            font-size: 22px;
+        }
+        
+    }
+
+

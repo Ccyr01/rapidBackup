@@ -1,0 +1,265 @@
+@use '../custom' as *;
+
+
+.location-pics{
+    height:350px;
+    background-color: #c44c50
+    ;
+    @include media-breakpoint-down(md){
+      
+    }
+    & > div:first-child > .locations__company-box  {
+      padding: 0px 10px;
+    }
+}
+.locations {
+    padding: 0 0 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; // Ensure all items have the same height
+
+    &__company-box {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+        position: relative;
+        background-color: $primary;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      
+        .nearest-loc{
+
+          color: white;
+          font-weight: 900;
+          font-size:40px;
+        }
+        a{
+          text-decoration: none;
+        }
+    }
+    .pic-container{
+
+      // height: 1200px;
+      @include media-breakpoint-down(lg){
+        height:auto;
+      }
+    }
+    .loc-pic{
+      min-height: 200px;
+      
+      @include media-breakpoint-down(md){
+        min-height: 0;
+        
+        
+
+      }
+    }
+    .locations__company-box {
+      a {
+        filter: grayscale(1);
+        transition: all 250ms ease; 
+        h2{
+          transition: all 250ms ease-out; 
+        }
+        &:hover{
+          filter: grayscale(0);
+          h2{
+            bottom: 75px !important;
+          }
+        }
+      }
+      @include media-breakpoint-down(md){
+        a {
+          filter: grayscale(0);
+          transition: all 250ms ease; 
+          h2{
+            transition: all 250ms ease-out; 
+          }
+          &:hover{
+            filter: grayscale(1);
+            h2{
+              bottom: 75px !important;
+            }
+          }
+      }
+    }
+      
+      @include media-breakpoint-down(md){
+        // background-color:$primary;
+      }
+      #nearest-location{
+        .img-for-sm-screen {
+          display: none; 
+      }
+        
+        @include media-breakpoint-down(md){
+          .nearest-loc br{
+            display: none;
+          }
+    .nearest-loc{
+      padding-top: 0;
+    }
+        .img-for-sm-screen {
+            display: block;
+            max-width: 100%; 
+            height: auto; 
+          }
+        }
+      }
+
+        #ep-img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-image: url("../../images/ElPaso_2.jpg");
+          background-position: right;
+    
+          @include media-breakpoint-down(lg){
+            background-position: right;
+          }
+          @include media-breakpoint-down(md){
+            background-image: url("../../images/elpasosmall.png") !important;
+            background-size: cover;
+            background-repeat: no-repeat;
+            h2{
+              display:none;
+            }
+          }
+          @include media-breakpoint-down(xl){
+            background-position: center;
+          } 
+          
+
+          h2 {
+            color:white;
+            position: absolute;
+            bottom: 15px; 
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 28px; 
+            font-weight: bold; 
+            margin: 0; 
+          }
+        }
+    }
+    .locations__company-box {
+        #horizon-img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-image: url("../../images/Horizon-1.jpg");
+          @include media-breakpoint-down(md){
+            background-image: url("../../images/horizonsmall.png") !important;
+            background-size: cover;
+            background-repeat: no-repeat;
+            h2{
+              display:none;
+            }
+          }
+          @include media-breakpoint-down(xl){
+            background-position: center;
+
+        }
+
+          h2 {
+            color:white;
+            position: absolute;
+            bottom: 15px; /* Adjust the distance from the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 28px; /* Set your desired font size */
+            font-weight: bold; /* Set your desired font weight */
+            margin: 0; /* Remove default margin */
+          }
+        }
+    }
+    .locations__company-box {
+        #socorro-img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-image: url("../../images/Socorro-1.jpg");
+          @include media-breakpoint-down(md){
+            background-image: url("../../images/socorrosmall.png") !important;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            h2{
+              display:none;
+            }
+          }
+
+          h2 {
+            color:white;
+            position: absolute;
+            bottom: 15px; /* Adjust the distance from the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 28px; /* Set your desired font size */
+            font-weight: bold; /* Set your desired font weight */
+            margin: 0; /* Remove default margin */
+          }
+        }
+    }
+    .locations__company-box {
+        #fabens-img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-image: url("../../images/Fabens-1.jpg");
+          background-position: right;
+          @include media-breakpoint-down(md){
+            background-image: url("../../images/fabenssmall.png") !important;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            h2{
+              display:none;
+            }
+          }
+          @include media-breakpoint-down(xl){
+            background-position: center;
+        }
+
+
+
+          h2 {
+            color:white;
+            position: absolute;
+            bottom: 15px; 
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 28px; 
+            font-weight: bold; 
+            margin: 0; 
+          }
+        }
+    }
+    h4{
+        font-size: 32px;
+        color:$secondary;
+    }
+
+    span i {
+        font-size: 2.5rem;
+        padding-bottom: 20px;
+        color: $primary;
+    }
+}
+
+
+// body{
+//     margin: 0;
+//     padding: 0;
+// }
+// footer-sm{
+//     margin-right: 0;
+// }
+
+.rapidAloansLogo{
+    @include media-breakpoint-down(sm){
+        text-align: center !important;
+    }
+}

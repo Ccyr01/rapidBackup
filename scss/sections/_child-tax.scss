@@ -1,0 +1,15 @@
+@use'../custom' as *;
+
+@use '../components/mixins' as *;
+
+#child-tax{
+    height: 300px;
+    background-position: center calc(100% + 30px);
+    background-size: cover;
+    margin-top: 100px;
+    border-radius: 0 0 500px 500px;
+    width: 100%;
+    @include media-breakpoint-up(xl){
+        height: 400px;
+        }
+}

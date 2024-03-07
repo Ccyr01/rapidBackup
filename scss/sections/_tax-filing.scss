@@ -1,0 +1,53 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+.rapidAloansLogo{
+    @include media-breakpoint-down(sm){
+        text-align: center !important;
+    }
+}
+.container1{
+    h2{
+        max-width: 500px;
+    }
+    .description-box{
+        max-width: 1000px;
+        font-size: 20px;
+        p{
+            font-size: 20px;
+        }
+    }
+    
+}
+.container2{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+
+    .left-container{
+        margin-left: 20px;
+        h2{
+            padding-top: 10px;
+        }
+    }
+
+    .right-container{
+        padding-top: 3rem;
+        margin-right: 20px;
+    }
+}
+.description-box2{
+    p{
+        font-size:20px;
+    }
+    
+}
+.call-us{
+    a.btn.btn-primary{
+        border:none;
+        margin: 10px; /* Add some spacing around the buttons */
+        transition: all 500ms ease;
+        &:hover{
+          background-color: $secondary;
+        }
+    }
+}

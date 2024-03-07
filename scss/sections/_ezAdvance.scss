@@ -1,0 +1,63 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.ez-body{
+
+
+    #ez-contact{
+        height: 300px;
+        padding-top: 400px;
+        background-position: center;
+        background-size: cover;
+        margin-top: 100px;
+        border-radius: 0 0 500px 500px;
+        width: 100%;
+    }
+
+
+    h2 {
+        text-align: center;
+    }
+
+    ul.ezChecklist {
+        list-style-type: none;
+        line-height: 2.6rem;
+        font-size: larger;
+    }
+
+    .fa-circle-check {
+        font-size: x-large;
+        color: $primary;
+    }
+
+    .Checklist {
+        padding-left: 15rem;
+        padding-right: 15rem;
+
+        @include media-breakpoint-down(lg) {
+            padding-left: 10rem;
+            padding-right: 10rem;
+        }
+        @include media-breakpoint-down(md) {
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+    
+}
+.social-icons {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.rapidAloansLogo {
+    @include media-breakpoint-down(sm) {
+        text-align: center !important;
+    }
+}
+

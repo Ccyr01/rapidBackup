@@ -1,0 +1,28 @@
+@use'custom';
+@use'sections/normalize';
+//IMPORT THE COMPOMENTS
+@use'components/animations';
+@use'components/buttons';
+@use'components/mixins';
+@use'components/typography';
+
+//IMPORT THE SECTIONS
+@use 'sections/billPayments';
+@use 'sections/ezAdvance';
+@use 'sections/contact';
+@use 'sections/navbar';
+@use 'sections/intro-section';
+@use 'sections/locations';
+@use 'sections/services';
+@use 'sections/get-started';
+@use 'sections/footer';
+@use 'sections/tax-filing';
+@use 'sections/promo';
+@use 'sections/tax-checklist';
+@use 'sections/notaryPublic';
+@use 'sections/thanks';
+@use 'sections/carousel';
+@use 'sections/_email-sign-up';
+@use 'sections/child-tax';
+@use 'sections/easter-popup'
+

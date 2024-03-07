@@ -1,0 +1,72 @@
+@use'../custom' as *;
+@use '../components/mixins' as *;
+
+#navbarNav{
+    gap: 20px;
+}
+.menu{
+    @include gradient;
+    background: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
+    li{
+        padding: 0px;
+        display: flex;
+        align-items: center;
+
+        a{
+            color: $white !important;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+    }
+}
+
+.navbar-nav .dropdown-menu{
+    background-color: $primary;
+}
+
+.dropdown-menu[data-bs-popper] {
+    top: 70%;
+}
+#contact-nav{
+    .container{
+        @include media-breakpoint-down(sm){
+            justify-content: flex-start;
+        }
+    }
+    
+}
+
+/* Highlight navigation items on hover */
+.nav-item:hover > .nav-link,
+.nav-item.active > .nav-link,
+.nav-item.dropdown:hover > .nav-link,
+.nav-item.dropdown.show > .nav-link,
+.dropdown-item:hover {
+    background-color: $secondary; /* Change to your desired hover color */
+    color: #fff;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+footer-sm{
+    margin-right: 0;
+}
+.rapidAloansLogo{
+    @include media-breakpoint-down(sm){
+        text-align: center !important;
+    }
+}
+
+
+
+nav .container{
+    max-width: none;
+    @include media-breakpoint-up(xl){
+        max-width: 1400px;
+    }
+}
+
+
+
+

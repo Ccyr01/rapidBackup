@@ -1,0 +1,133 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.email-list {
+  // @include gradient;
+  // color: linear-gradient(to left, rgba($primary, 0.95), rgba($secondary, 0.95));
+  #contact-form {
+    @media screen and (max-width: 350px) {
+      padding: 0;
+    }
+    .custom-label {
+      @media screen and (max-width: 400px) {
+        text-wrap: wrap !important;
+        text-align: center;
+      }
+    }
+    .col-md-8 {
+      margin-top: 1px;
+    }
+  }
+  .sign-up-container {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    flex-wrap: wrap;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .custom-label {
+      @media screen and (max-width: 1000px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 950px) {
+        font-size: 12px;
+      }
+      @media screen and (max-width: 950px) {
+        font-size: 11px;
+      }
+    }
+    .contact-button-div {
+      padding-bottom: 3px;
+    }
+
+    .input-group {
+      min-width: 600px;
+      @media screen and (max-width: 1300px) {
+        min-width: 500px;
+      }
+      @media screen and (max-width: 1150px) {
+        min-width: 450px;
+      }
+      @media screen and (max-width: 1000px) {
+        min-width: 400px;
+      }
+      @media screen and (max-width: 1000px) {
+        min-width: 350px;
+      }
+      @media screen and (max-width: 900px) {
+        min-width: 320px;
+      }
+      @media screen and (max-width: 400px) {
+        min-width: 180px;
+        max-width: 250px;
+      }
+    }
+    .ribbon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 20px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 5px !important;
+        max-width: 500px;
+      }
+      @media screen and (max-width: 400px) {
+        width: 100%;
+        margin-bottom: 5px !important;
+        max-width: 280px;
+      }
+      @media screen and (max-width: 400px) {
+        width: 100%;
+        margin-bottom: 5px !important;
+        max-width: 100px;
+      }
+      @media screen and (max-width: 400px) {
+        width: 100%;
+        margin-bottom: 5px !important;
+        max-width: 200px;
+      }
+
+      .ribbon-inner {
+        width: 100%;
+        padding-right: 20px;
+        clip-path: polygon(100% 0%, 89% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+        background-color: rgb(220, 24, 24, 0.7);
+        > h2 {
+          @media screen and (max-width: 1236px) {
+            font-size: 28px;
+          }
+          @media screen and (max-width: 1040px) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .go {
+      margin-top: 0;
+    }
+  }
+  background-color: $secondary;
+  .row {
+    margin: 2px 12px;
+  }
+
+  h2 {
+    color: white;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .form-label {
+    color: white;
+  }
+  .sign-up-btn {
+    color: white;
+    background-color: black;
+  }
+}

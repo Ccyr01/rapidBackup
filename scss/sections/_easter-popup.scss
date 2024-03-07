@@ -1,0 +1,53 @@
+@use'../custom' as *;
+@use '../components/mixins' as *;
+
+.popup-container{
+    .popup{
+        width:600px;
+        // background: #fff;
+        border-radius: 6px;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(.1);
+        text-align: center;
+        padding: 0 30px 30px;
+        color: #333;
+        visibility: hidden;
+        transition: transform 0.4s, top 0.4s;
+        @include media-breakpoint-down(md){
+            width: 400px;
+            padding: 0;
+        }
+        @include media-breakpoint-down(sm){
+            width: 100%;
+            padding: 0;
+        }
+        .easter-popup-img{
+            width: 100%;
+            
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: white;
+            @include media-breakpoint-up(md) {
+                // Adjust the position for screens wider than 768px
+                top: 20px;
+                right: 30px;
+            }
+        }
+    }
+    .open-popup{
+        z-index:10;
+        visibility: visible;
+        top:50%;
+        transform: translate(-50%,-50%) scale(1);
+    }
+
+}
